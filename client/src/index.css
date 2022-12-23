@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,400;0,500;1,400&family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+/* Custom Properties */
+:root {
+  --first-color: rgb(235, 196, 132);
+  --first-color-dark: rgb(192, 142, 63);
+  --second-color: rgba(247, 233, 161);
+  --third-color: #ddf6a2;
+  --white-color: #fff;
+  --black-color: #000;
+  --font: 'Kantumruy Pro', sans-serif;
+  --max-width: 1200px;
+}
+
+/* Reset */
+html {
+  box-sizing: border-box;
+  font-family: var(--font);
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0 auto;
+  overflow-x: hidden;
+  color: var(--black-color);
+  max-width: 1530px;
+}
+
+a {
+  color: var(--third-color);
+  transition: all 0.5s ease-out;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+h3 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+p {
+  line-height: 1;
+}

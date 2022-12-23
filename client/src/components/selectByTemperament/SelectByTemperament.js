@@ -4,6 +4,7 @@ import {
   filterDogsByTemperament,
   getTemperaments,
 } from '../../redux/action.js';
+import styles from './Selects.module.css';
 
 function SelectByTemperament() {
   const temperaments = useSelector(state => state.temperaments);
@@ -22,7 +23,11 @@ function SelectByTemperament() {
 
   return (
     <div>
-      <select defaultValue="default" onChange={handleSelect}>
+      <select
+        className={styles.selectInput}
+        defaultValue="default"
+        onChange={handleSelect}
+      >
         <option value="default">Elija un temperamento</option>
         {temperaments?.map(t => (
           <option value={t.name} key={t.id}>

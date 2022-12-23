@@ -8,7 +8,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40vw;
+  width: 70vw;
   height: 5vh;
 }
 
@@ -33,4 +33,9 @@
   background-color: var(--first-color);
   font-weight: bold;
   color: var(--white-color);
+  cursor: pointer;
+}
+
+.buttonInput:hover {
+  background-color: rgba(235, 196, 132, 0.7);
 }

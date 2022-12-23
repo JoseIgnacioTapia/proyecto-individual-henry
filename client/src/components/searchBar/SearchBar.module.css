@@ -1,0 +1,36 @@
+.container {
+  margin: 1rem auto;
+}
+
+.main {
+  margin: 0 auto;
+  max-width: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40vw;
+  height: 5vh;
+}
+
+.searchInput {
+  height: 50px;
+  border: 1px solid var(--first-color);
+  outline: none;
+  border-radius: 4px 0px 0px 4px;
+  width: 100%;
+  padding: 13px;
+  font-size: 13pt;
+}
+
+.searchInput::placeholder {
+  color: var(--black-color);
+}
+
+.buttonInput {
+  height: 50px;
+  padding: 5px 10px;
+  border: none;
+  background-color: var(--first-color);
+  font-weight: bold;
+  color: var(--white-color);
+}

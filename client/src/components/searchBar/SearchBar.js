@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { getSearchDog } from '../../redux/action';
+import { ButtonPrimary } from '../Button/Button';
+import styles from './SearchBar.module.css';
 
 function SearchBar() {
   const [dogInput, setDogInput] = useState('');
@@ -25,9 +27,10 @@ function SearchBar() {
   };
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
+    <div className={styles.container}>
+      <form className={styles.main} onSubmit={handleSubmit}>
         <input
+          className={styles.searchInput}
           type="text"
           name="dog"
           value={dogInput}
@@ -35,7 +38,7 @@ function SearchBar() {
           onChange={e => handleInputChange(e)}
         />
         {message && <p>{message}</p>}
-        <input type="submit" value="BUSCAR" />
+        <input className={styles.buttonInput} type="submit" value="BUSCAR" />
       </form>
     </div>
   );

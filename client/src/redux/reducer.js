@@ -8,6 +8,7 @@ import {
   FILTER_BY_DOG,
   SORT_ALPHA,
   SORT_WEIGHT,
+  SET_PAGE,
   ERROR,
 } from './action';
 import { averageWeight } from '../helpers/helpers.js';
@@ -17,6 +18,7 @@ const initialState = {
   allDogs: [],
   dogDetail: {},
   temperaments: [],
+  statePage: 1,
   error: {},
 };
 
@@ -111,6 +113,12 @@ const rootReducer = (state = initialState, action) => {
       return {
         ...state,
         dogs: sortedWeight,
+      };
+
+    case SET_PAGE:
+      return {
+        ...state,
+        statePage: action.payload,
       };
 
     case ERROR:

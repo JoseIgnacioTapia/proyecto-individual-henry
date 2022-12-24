@@ -8,6 +8,7 @@ export const FILTER_BY_DOG = 'FILTER_BY_DOG';
 export const FILTER_BY_TEMPERAMENT = 'FILTER_BY_TEMPERAMENT';
 export const SORT_ALPHA = 'SORT_ALPHA';
 export const SORT_WEIGHT = 'SORT_WEIGHT';
+export const SET_PAGE = 'SET_PAGE';
 export const ERROR = 'ERROR';
 
 export const getAllDogs = () => {
@@ -89,4 +90,8 @@ export const sortByAlphabetic = order => {
 
 export const sortByWeight = order => {
   return { type: SORT_WEIGHT, payload: order };
+};
+
+export const setPage = num => {
+  return { type: SET_PAGE, payload: num };
 };

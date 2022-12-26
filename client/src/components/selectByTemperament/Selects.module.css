@@ -2,6 +2,8 @@
   cursor: pointer;
   background-color: var(--white-color);
   font-size: 1.2rem;
+  height: auto;
+  width: auto;
   border: none;
   outline: none;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);

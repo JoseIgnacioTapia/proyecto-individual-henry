@@ -1,0 +1,41 @@
+.container {
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 1250px;
+}
+
+.description {
+  padding: 5px;
+}
+
+.description > * {
+  margin: 10px auto;
+}
+
+.temperaments {
+  color: var(--black-color);
+  font-style: italic;
+  font-size: 1.2rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+@media (min-width: 900px) {
+  .container {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .container > * {
+    flex-grow: 1;
+  }
+
+  .photoContainer {
+    width: 50%;
+  }
+}

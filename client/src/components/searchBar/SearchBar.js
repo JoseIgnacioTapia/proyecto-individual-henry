@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { getSearchDog } from '../../redux/action';
-import { ButtonPrimary } from '../Button/Button';
 import styles from './SearchBar.module.css';
 
 function SearchBar() {

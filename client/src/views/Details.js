@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import Navbar from '../components/navbar/Navbar';
 import { getDogDetail, clearDogDetail, setLoading } from '../redux/action.js';
 import styles from './Details.module.css';
+import Loading from '../components/loading/Loading';
 
 function Details() {
   const { id } = useParams();
@@ -26,7 +27,7 @@ function Details() {
       <Navbar />
       {Object.keys(dogDetail).length === 0 ? (
         <div>
-          <p>Loading...</p>
+          <Loading />
         </div>
       ) : (
         <div className={styles.container}>

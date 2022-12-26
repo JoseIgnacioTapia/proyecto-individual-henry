@@ -5,6 +5,7 @@ import { useForm } from '../hooks/useForm';
 import Navbar from '../components/navbar/Navbar';
 import { validationsForm } from '../helpers/helpers.js';
 import styles from './CreatePage.module.css';
+import Loading from '../components/loading/Loading';
 
 const initialForm = {
   name: '',
@@ -148,7 +149,7 @@ function CreatePage() {
             {form.temperaments?.map(c => {
               return (
                 <div className={styles.temperament} key={c}>
-                  <p>{c}</p>
+                  <p className={styles.tempSelected}>{c}</p>
                   <button onClick={() => handleDeleteTemperament(c)}>X</button>
                 </div>
               );
@@ -162,8 +163,12 @@ function CreatePage() {
           value="CREAR"
         />
       </form>
-      {loading && <p>Enviando...</p>}
-      {response && <p>Los datos se enviaron correctamente</p>}
+      {loading && <Loading />}
+      {response && (
+        <p className={styles.messagePositive}>
+          Los datos se enviaron correctamente
+        </p>
+      )}
     </div>
   );
 }

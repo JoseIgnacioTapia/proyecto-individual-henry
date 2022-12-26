@@ -6,6 +6,7 @@ import Card from '../card/Card';
 import Paginated from '../paginated/Paginated';
 import SelectByOrder from '../selectByOrder/SelectByOrder';
 import styles from './CardsContainer.module.css';
+import Loading from '../loading/Loading';
 
 function CardsContainer() {
   const dogs = useSelector(state => state.dogs);
@@ -72,7 +73,7 @@ function CardsContainer() {
             );
           })
         ) : (
-          <p>Loading...</p>
+          <Loading />
         )}
       </div>
     </div>

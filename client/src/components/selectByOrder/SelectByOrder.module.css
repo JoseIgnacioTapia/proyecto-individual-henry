@@ -5,6 +5,10 @@
   padding: 1rem 6rem;
 }
 
+.title {
+  margin-bottom: 1rem;
+}
+
 @media (min-width: 645px) {
   .selectsContainer {
     flex-direction: row;

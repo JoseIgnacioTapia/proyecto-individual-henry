@@ -11,7 +11,7 @@ function MainPage() {
       <Navbar />
       <SearchBar />
       <div>
-        <h3>Filtrar por:</h3>
+        <h3 className={styles.titleFilter}>Filtrar por:</h3>
         <div className={styles.selectsContainer}>
           <SelectByTemperament />
           <SelectByDog />

@@ -14,7 +14,7 @@ function SelectByOrder({ setOrderAlpha, setCurrentPage, setOrderWeight }) {
 
   return (
     <div>
-      <h3>Ordenar por:</h3>
+      <h3 className={styleContainer.title}>Ordenar por:</h3>
       <div className={styleContainer.selectsContainer}>
         <div>
           <label>Alfabeto</label>

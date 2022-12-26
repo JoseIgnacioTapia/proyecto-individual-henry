@@ -4,6 +4,7 @@ import { getTemperaments } from '../redux/action';
 import { useForm } from '../hooks/useForm';
 import Navbar from '../components/navbar/Navbar';
 import { validationsForm } from '../helpers/helpers.js';
+import styles from './CreatePage.module.css';
 
 const initialForm = {
   name: '',
@@ -39,8 +40,8 @@ function CreatePage() {
   return (
     <div>
       <Navbar />
-      <h2>Crear Raza de Perro</h2>
-      <form onSubmit={handleSubmit}>
+      <h2 className={styles.title}>Crear Raza de Perro</h2>
+      <form onSubmit={handleSubmit} className={styles.form}>
         <div>
           <label htmlFor="name">Nombre:</label>
           <input
@@ -112,9 +113,8 @@ function CreatePage() {
             {errors.maxHeight && <p>{errors.maxHeight}</p>}
           </div>
         </div>
-        <div>
-          <label>Tiempo de vida</label>
-          <label htmlFor="lifeSpan">Aproximadamente:</label>
+        <div className={styles.lifeGroup}>
+          <label htmlFor="lifeSpan"> Vida aproximadamente:</label>
           <input
             type="number"
             name="lifeSpan"
@@ -125,7 +125,7 @@ function CreatePage() {
           {errors.lifeSpan && <p>{errors.lifeSpan}</p>}
         </div>
         <div>
-          <div>
+          <div className={styles.options}>
             <label htmlFor="temperaments">Temperamentos:</label>
             <select
               name="temperaments"
@@ -144,10 +144,10 @@ function CreatePage() {
             </select>
             {errors.temperaments && <p>{errors.temperaments}</p>}
           </div>
-          <div>
+          <div className={styles.wrapTemperament}>
             {form.temperaments?.map(c => {
               return (
-                <div key={c}>
+                <div className={styles.temperament} key={c}>
                   <p>{c}</p>
                   <button onClick={() => handleDeleteTemperament(c)}>X</button>
                 </div>

@@ -1,0 +1,131 @@
+.title {
+  font-size: 2.5rem;
+  margin: 2rem auto;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  max-width: 700px;
+  margin: 1rem auto;
+  padding: 10px 20px;
+  background-color: var(--first-color);
+  border-radius: 8px;
+}
+
+.form > div {
+  margin-bottom: 1rem;
+}
+
+input[type='text'],
+input[type='number'],
+select {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  font-size: 1.2rem;
+  height: auto;
+  margin: 0;
+  outline: 0;
+  padding: 12px;
+  width: 100%;
+  background-color: #e8eeef;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03);
+}
+
+input[type='number'] {
+  width: 150px;
+  margin-bottom: 5px;
+}
+
+select {
+  text-align: center;
+  padding: 6px;
+  height: 32px;
+  border-radius: 2px;
+  margin-bottom: 15px;
+}
+
+input[type='submit'] {
+  padding: 15px 35px;
+  color: var(--white-color);
+  background-color: var(--third-color);
+  font-size: 18px;
+  text-align: center;
+  font-style: normal;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 100%;
+  border: none;
+  box-shadow: 1px -1px 1px rgba(255, 255, 255, 0.3);
+  transition: all 0.2s ease-in;
+}
+
+input[type='submit']:hover {
+  background-color: #b5c983;
+}
+
+label {
+  display: inline-block;
+  margin-bottom: 8px;
+  font-weight: 300;
+  font-size: 1.2rem;
+}
+
+p {
+  margin: 0;
+  color: red;
+}
+
+.lifeGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.temperament {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 5px;
+  font-weight: bold;
+}
+
+.wrapTemperament {
+  max-width: 70%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.temperament > p {
+  color: var(--black-color);
+}
+
+.temperament > button {
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: transparent;
+  color: red;
+  cursor: pointer;
+  padding: 2px;
+  margin-left: 2px;
+}
+
+select[name='temperaments'] {
+  max-width: 400px;
+  height: auto;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

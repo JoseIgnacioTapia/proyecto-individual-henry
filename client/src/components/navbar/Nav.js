@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Nav = styled.nav`
   background-color: var(--second-color);
-  height: 2.5rem;
+  height: 3rem;
 
   ul {
     display: flex;
@@ -10,14 +10,14 @@ export const Nav = styled.nav`
     justify-content: space-around;
     align-items: center;
     list-style: none;
-    padding-top: 0.3rem;
+    padding-top: 0.5rem;
 
     a {
       text-decoration: none;
       color: var(--black-color);
       font-size: 1.5rem;
       cursor: pointer;
-      transition: all 0.3s ease-in;
+      transition: all 0.2s ease-in;
 
       &:hover {
         color: var(--first-color);

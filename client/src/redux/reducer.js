@@ -83,7 +83,6 @@ const rootReducer = (state = initialState, action) => {
       };
 
     case SORT_ALPHA:
-      console.log(state.dogs);
       let sortedArr =
         action.payload === 'asc'
           ? state.dogs.sort((a, b) => {
@@ -98,7 +97,7 @@ const rootReducer = (state = initialState, action) => {
             });
       return {
         ...state,
-        countries: sortedArr,
+        dogs: sortedArr,
       };
 
     case SORT_WEIGHT:

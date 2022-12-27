@@ -37,10 +37,12 @@ function CardsContainer() {
 
   useEffect(() => {
     if (orderAlpha !== '') {
+      setOrderWeight('');
       dispatch(sortByAlphabetic(orderAlpha));
       setNewOrder(`Ordenado ${orderAlpha}`);
     }
     if (orderWeight !== '') {
+      setOrderAlpha('');
       dispatch(sortByWeight(orderWeight));
       setNewOrder(`Ordenado ${orderWeight}`);
     }

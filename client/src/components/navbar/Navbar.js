@@ -14,7 +14,12 @@ function Navbar() {
     <div>
       <Nav>
         <ul>
-          <NavLink to="/dogs" activeClassName="current" onClick={handleClick}>
+          <NavLink
+            exact
+            to="/dogs"
+            activeClassName="current"
+            onClick={handleClick}
+          >
             <li>Principal</li>
           </NavLink>
 

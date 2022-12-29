@@ -158,6 +158,7 @@ function CreatePage() {
         </div>
 
         <input
+          className={styles.inputSubmit}
           type="submit"
           disabled={Object.keys(errors).length < 1 ? false : true}
           value="CREAR"

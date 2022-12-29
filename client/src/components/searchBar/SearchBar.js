@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { getSearchDog } from '../../redux/action';
 import styles from './SearchBar.module.css';
 
-function SearchBar() {
+function SearchBar({ setWordSearch }) {
   const [dogInput, setDogInput] = useState('');
   const [message, setMessage] = useState('');
 
@@ -16,12 +16,14 @@ function SearchBar() {
 
   const handleSubmit = e => {
     e.preventDefault();
+    setMessage('');
 
     if (!dogInput) {
       setMessage('Debe ingresar el nombre de la raza');
     }
 
     dispatch(getSearchDog(dogInput));
+    setWordSearch(dogInput);
     setDogInput('');
   };
 
@@ -36,9 +38,9 @@ function SearchBar() {
           placeholder="Raza"
           onChange={e => handleInputChange(e)}
         />
-        {message && <p>{message}</p>}
         <input className={styles.buttonInput} type="submit" value="BUSCAR" />
       </form>
+      {message && <p className={styles.errorMessage}>{message}</p>}
     </div>
   );
 }

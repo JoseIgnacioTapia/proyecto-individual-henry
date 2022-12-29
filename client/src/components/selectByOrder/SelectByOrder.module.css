@@ -9,7 +9,7 @@
   margin-bottom: 1rem;
 }
 
-@media (min-width: 645px) {
+/* @media (min-width: 645px) {
   .selectsContainer {
     flex-direction: row;
     justify-content: space-around;
@@ -17,4 +17,4 @@
     width: 50%;
     margin: 0 auto;
   }
-}
+} */

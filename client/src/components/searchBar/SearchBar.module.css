@@ -26,9 +26,16 @@
   color: var(--black-color);
 }
 
+.errorMessage {
+  margin: 10px auto;
+  font-size: 1.2rem;
+}
+
 .buttonInput {
+  font-size: 100%;
+  width: 40%;
   height: 50px;
-  padding: 5px 10px;
+  padding: 5px 5px;
   border: none;
   background-color: var(--first-color);
   font-weight: bold;
